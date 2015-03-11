@@ -26,10 +26,11 @@
     "nan": "^1.7.0",
     "supervisor": "^0.6.0"
   },
-  "scripts": {
-      "start": "supervisor lib/lcdstats"
-  },
   "license": "MIT",
   "gypfile": true,
-  "main": "./lib/lcdstats.js"
+  "bin": {
+    "lcdstats": "./bin/lcdstats"
+  },
+  "main": "./lib/lcdstats.js",
+  "preferGlobal": true
 }
