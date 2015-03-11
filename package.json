@@ -1,7 +1,7 @@
 {
   "name": "lcdstats",
   "description": "System info marquee designed for LCD displays",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": {
     "name": "Chris Barber",
     "email": "chris@cb1inc.com"
