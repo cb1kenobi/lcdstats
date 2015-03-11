@@ -1,3 +1,12 @@
+/**
+ * Small library for communicating with a CrystalFontz 634 4x20 LCD display.
+ *
+ * Copyright (c) Copyright (c) 2013-2015 Chris Barber
+ *
+ * Licensed under the terms of the MIT License
+ * Please see the LICENSE included with this distribution for details.
+ */
+
 #include <node.h>
 #include <nan.h>
 #include <v8.h>

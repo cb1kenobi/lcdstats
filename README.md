@@ -1,6 +1,6 @@
 # lcdstats
 
-Displays various system information on a [CrystalFontz 634 4x20 LCD display](https://www.crystalfontz.com/products/select_kit.html).
+Displays system information on a [CrystalFontz 634 4x20 LCD display](https://www.crystalfontz.com/products/select_kit.html).
 
 * Disk usage
 * Memory usage
@@ -17,14 +17,44 @@ Displays various system information on a [CrystalFontz 634 4x20 LCD display](htt
 
 * [Ubuntu](http://www.ubuntu.com)-based Linux distro (others may work)
 * [io.js](https://iojs.org) v1.0+ or [Node.js](https://nodejs.org/) v0.10+
-* lm-sensors
 * GCC
+* lm-sensors (optional)
 
 # Installation
 
 ```bash
 sudo apt-get install build-essential lm-sensors
-npm install -g lcdstats
+sudo npm install -g lcdstats
+```
+
+To start lcdstats during boot, it is recommended that you use the handy dandy
+[upstarter](https://www.npmjs.com/package/upstarter) npm module.
+
+```bash
+cd /usr/local/lib/node_modules/lcdstats
+sudo npm install -g upstarter
+sudo upstarter
+```
+
+Upstarter will prompt you for a bunch of questions:
+
+```
+Upstart service name (lcdstats):
+Command(s) to run: (hit enter twice when done)
+lcdstats
+
+Upstart service description (System info marquee designed for LCD displays):
+Log output to /var/log/upstart? (y/n): n
+System user to run under (root):
+Set max file descriptors (1000000):
+Working directory for process (/files/lcdstats): /tmp
+Respawn automatically? (y/n): y
+```
+
+Finally start the service:
+
+``` bash
+sudo service lcdstats start
 ```
 
 # Configuration
@@ -39,6 +69,7 @@ module.exports = {
 	refreshInterval: 1500,
 	modules: [
 		{ name: 'disk', device: '/dev/sda1' },
+        // { name: 'mdraid', device: '/dev/md0' },
 		{ name: 'memory' },
 		{ name: 'sensors' },
 		{ name: 'uptime' },
@@ -52,11 +83,19 @@ module.exports = {
 You may have more than one of a specific module. For example, you can have two
 modules set for displaying `/dev/sda1` and `/dev/sdb1`.
 
+# Debug
+
+You run lcdstats in a sort of "debug" mode by specifying the `--debug` flag:
+
+```bash
+lcdstats --debug
+```
+
 # License
 
 (The MIT License)
 
-Copyright (c) 2013-2014 Chris Barber
+Copyright (c) 2013-2015 Chris Barber
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
