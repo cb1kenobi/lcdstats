@@ -1,0 +1,35 @@
+{
+  "name": "lcdstats",
+  "description": "System info marquee designed for LCD displays",
+  "version": "0.2.0",
+  "author": {
+    "name": "Chris Barber",
+    "email": "chris@cb1inc.com"
+  },
+  "homepage": "https://github.com/cb1kenobi/lcdstats",
+  "bugs": "https://github.com/cb1kenobi/lcdstats/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cb1kenobi/lcdstats.git"
+  },
+  "keywords": [
+    "stats",
+    "lcd",
+    "crystalfontz",
+    "cfa634",
+    "nas",
+    "linux",
+    "usb"
+  ],
+  "dependencies": {
+    "async": "^0.9.0",
+    "nan": "^1.7.0",
+    "supervisor": "^0.6.0"
+  },
+  "scripts": {
+      "start": "supervisor lib/lcdstats"
+  },
+  "license": "MIT",
+  "gypfile": true,
+  "main": "./lib/lcdstats.js"
+}
