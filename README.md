@@ -2,7 +2,7 @@
 
 Displays system information on a [CrystalFontz 634 4x20 LCD display](https://www.crystalfontz.com/products/select_kit.html).
 
-![lcdstats](https://www.evernote.com/shard/s75/sh/124401d9-7a08-4327-b56d-a12fdcf4d865/4f003193277eb686/res/ecb525a6-0468-41b0-adf2-ea0aaa4921c3/lcdstats.png)
+![lcdstats](https://raw.githubusercontent.com/cb1kenobi/lcdstats/master/lcdstats.png)
 
 * Disk usage
 * Memory usage
