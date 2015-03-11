@@ -17,7 +17,7 @@ Displays system information on a [CrystalFontz 634 4x20 LCD display](https://www
 
 # Requirements
 
-* [Ubuntu](http://www.ubuntu.com)-based Linux distro (others may work)
+* Debian-based Linux distro (such as [Ubuntu](http://www.ubuntu.com))
 * [io.js](https://iojs.org) v1.0+ or [Node.js](https://nodejs.org/) v0.10+
 * GCC
 * lm-sensors (optional)
