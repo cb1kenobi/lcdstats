@@ -3,8 +3,6 @@
 .git
 .gitignore
 build
-src
 Makefile
-binding.gyp
 node_modules
 conf/settings.js
