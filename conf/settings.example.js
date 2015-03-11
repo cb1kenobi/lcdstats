@@ -3,7 +3,7 @@
 module.exports = {
 	device: '/dev/ttyUSB0',
 	bitrate: 19200,
-	refreshInterval: 1500,
+	refreshInterval: 2000,
 	modules: [
 		{ name: 'disk', device: '/dev/sda1' },
 		// { name: 'mdraid', device: '/dev/md0' },
