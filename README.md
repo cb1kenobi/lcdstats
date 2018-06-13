@@ -1,5 +1,7 @@
 # lcdstats
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cb1kenobi/lcdstats.svg)](https://greenkeeper.io/)
+
 Displays system information on a [CrystalFontz 634 4x20 LCD display](https://www.crystalfontz.com/products/select_kit.html).
 
 ![lcdstats](https://raw.githubusercontent.com/cb1kenobi/lcdstats/master/lcdstats.png)
